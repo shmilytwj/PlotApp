@@ -18,6 +18,14 @@ public class CustomView extends View {
         return strFunction;
     }
 
+    public String getStr() {
+        return str;
+    }
+
+    public void setStr(String str) {
+        this.str = str;
+    }
+
     public void setStrFunction(String strFunction) {
         this.strFunction = strFunction;
     }
@@ -47,7 +55,7 @@ public class CustomView extends View {
     }
 
     String strFunction;
-
+    String str;
 
     @Override
     protected void onDraw(Canvas canvas) {
@@ -64,6 +72,10 @@ public class CustomView extends View {
         axis.draw(canvas);
         if(strFunction!="" || strFunction.length()!=0) {
             Plot plot = new Plot(axis, strFunction, "x");
+            plot.draw(canvas);
+        }
+        if(str!="" || str.length()!=0) {
+            Plot plot = new Plot(axis, str, "x");
             plot.draw(canvas);
         }
 

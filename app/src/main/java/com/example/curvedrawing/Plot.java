@@ -92,8 +92,6 @@ public class Plot {
             float y1=mAxis.convertYLP2DP(0)-mAxis.convertXLP2DP(t*oldy)+mAxis.convertXLP2DP(0);
             float x2=mAxis.convertXLP2DP(t*newx);
             float y2=mAxis.convertYLP2DP(0)-mAxis.convertXLP2DP(t*newy)+mAxis.convertXLP2DP(0);
-
-            System.out.println(t);
             canvas.drawLine(x1,y1,x2,y2,paint);
 //            canvas.drawLine(mAxis.convertXLP2DP(oldx),mAxis.convertYLP2DP(0)-mAxis.convertXLP2DP(oldy)+mAxis.convertXLP2DP(0),mAxis.convertXLP2DP(newx),mAxis.convertYLP2DP(0)-mAxis.convertXLP2DP(newy)+mAxis.convertXLP2DP(0),paint);
             oldx=newx;
